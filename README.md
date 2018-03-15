@@ -1,4 +1,4 @@
-Simple subnetwork generator service. It takes last subnetwork for the given network, adds subnetwork size and returns next network. To configure per-server network just add new {server_name}.json to servers folder:
+Simple subnetwork generator service. It takes last subnetwork for the given network, adds subnetwork size and returns next network. To configure per-server network just add new `{server_name}.json` to servers folder:
 ```json
 {
     "name": "default",
@@ -7,7 +7,7 @@ Simple subnetwork generator service. It takes last subnetwork for the given netw
     "lastSubnetwork": "10.0.0.0"
 }
 ```
-If service up and running at subnetwork.service, then 
+If service up and running at `https://subnetwork.service`, then 
 ```bash
 docker network create --subnet=$(curl https://subnetwork.service/new/default) network_name
 ```

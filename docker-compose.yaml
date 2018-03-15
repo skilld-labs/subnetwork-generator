@@ -12,9 +12,3 @@ services:
     expose:
       - "${PORT}"
     command: "node index.js"
-    labels:
-      - 'traefik.backend=ng'
-      - 'traefik.port=${PORT}'
-      - 'traefik.enable=true'
-      - 'traefik.frontend.rule=Host:ng.${HOST_SUFFIX}'
-      - 'traefik.frontend.entryPoints=http,https'

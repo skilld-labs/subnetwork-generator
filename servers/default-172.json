@@ -1,0 +1,6 @@
+{
+  "name": "default-172",
+  "network": "172.16.0.0/12",
+  "subnetworkSize": "24",
+  "lastSubnetwork": "172.16.0.0"
+}

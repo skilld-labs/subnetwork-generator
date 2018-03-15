@@ -1,0 +1,6 @@
+{
+    "name": "default",
+    "network": "10.0.0.0/8",
+    "subnetworkSize": "24",
+    "lastSubnetwork": "10.0.0.0"
+}

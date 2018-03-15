@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  ng:
+    image: "node:9-alpine"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+      - PORT=${PORT}
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "${PORT}"
+    command: "node index.js"
+    labels:
+      - 'traefik.backend=ng'
+      - 'traefik.port=${PORT}'
+      - 'traefik.enable=true'
+      - 'traefik.frontend.rule=Host:ng.${HOST_SUFFIX}'
+      - 'traefik.frontend.entryPoints=http,https'

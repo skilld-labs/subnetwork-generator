@@ -8,7 +8,7 @@ module.exports = {
     let subnet = ip.cidrSubnet(options.lastSubnetwork + "/" + options.subnetworkSize);
     let nextNetworkAddress = ip.fromLong(ip.toLong(subnet.broadcastAddress) + 1);
     if (!ip.cidrSubnet(options.network).contains(nextNetworkAddress)) {
-      nextNetworkAddress = ip.cidrSubnet(options.network);
+      nextNetworkAddress = ip.cidrSubnet(options.network).networkAddress;
     }
     return nextNetworkAddress;
   },
@@ -56,4 +56,4 @@ module.exports = {
   listServers: () => {
 
   }
-}
+};

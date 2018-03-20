@@ -4,12 +4,15 @@
   "description": "Web-service which generates subnetwork sequence, based on given network and subnetwork size",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "author": "Pavel Makhrinskyi",
   "license": "GPL-3.0",
   "dependencies": {
     "express": "^4.16.2",
     "ip": "^1.1.5"
+  },
+  "devDependencies": {
+    "jest": "^22.4.2"
   }
 }
